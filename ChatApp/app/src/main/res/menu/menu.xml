@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_view_users"
+        android:title="Ver Usuarios"
+        android:icon="@drawable/ic_view_users"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_create_group"
+        android:title="Crear Grupo"
+        android:icon="@drawable/ic_create_group"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="Configuracion de perfil"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title=" Cerrar sesión"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="Salir"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="griss">#4C4A4A</color>
+    <color name="white">#FFFEFE</color>
+    <color name="whiteS">#088395</color>
+    <color name="material_dynamic_neutral80">#CF3D3D</color>
+    <color name="buttonBackground">#4285F4</color>
+    <color name="buttonText">#FFFFFF</color>
+
+
+
+</resources>
