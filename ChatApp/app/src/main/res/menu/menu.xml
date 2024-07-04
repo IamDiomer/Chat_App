@@ -11,8 +11,8 @@
         android:icon="@drawable/ic_create_group"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_settings"
-        android:title="Configuracion de perfil"
+        android:id="@+id/action_profile"
+        android:title="Ver perfil"
         android:icon="@drawable/ic_settings"
         app:showAsAction="ifRoom" />
 

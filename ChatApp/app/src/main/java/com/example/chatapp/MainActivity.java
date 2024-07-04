@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.action_create_group) {
             Intent intent = new Intent(MainActivity.this, CreateGroupActivity.class);
             startActivity(intent);
-        } else if (item.getItemId() == R.id.action_settings) {
-            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        } else if (item.getItemId() == R.id.action_profile) {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
         }else if (item.getItemId() == R.id.action_logout) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
