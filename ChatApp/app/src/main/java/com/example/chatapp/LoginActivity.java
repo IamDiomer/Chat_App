@@ -90,11 +90,11 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,"Bienvenido", Toast.LENGTH_SHORT).show();
 
                         database.getReference().child("Users").child(user.getUid()).setValue(map);
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
                     } else {
                         Toast.makeText(LoginActivity.this, "Autenticación fallida.", Toast.LENGTH_SHORT).show();
                     }
-                });
+        });
     }
 }
