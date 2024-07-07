@@ -3,5 +3,5 @@
     <string name="secondactivity">SecondActivity</string>
     <string name="default_web_client_id">1</string>
     <string name="s_guenos_en_nuestras_redes_sociales">Síguenos en nuestras redes sociales</string>
-
+    <string name="profile_picture">Profile Picture</string>
 </resources>

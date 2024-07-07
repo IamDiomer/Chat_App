@@ -4,10 +4,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +38,14 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsuarioViewH
         holder.nombreUsuarioTextView.setText(usuario.getName());
         holder.usuarioCheckBox.setChecked(idsUsuariosSeleccionados.contains(usuario.getId()));
 
+        ////7cargar foto de perfi
+        Glide.with(holder.itemView.getContext())
+                .load(usuario.getProfile())
+                .placeholder(R.drawable.ic_view_users)
+                .error(android.R.drawable.ic_dialog_alert)
+                .circleCrop()
+                .into(holder.profilePictureImageView);
+
         holder.usuarioCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 idsUsuariosSeleccionados.add(usuario.getId());
@@ -56,11 +67,13 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsuarioViewH
     static class UsuarioViewHolder extends RecyclerView.ViewHolder {
         TextView nombreUsuarioTextView;
         CheckBox usuarioCheckBox;
+        ImageView profilePictureImageView;
 
         UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
             nombreUsuarioTextView = itemView.findViewById(R.id.userNameTextView);
             usuarioCheckBox = itemView.findViewById(R.id.userCheckBox);
+            profilePictureImageView = itemView.findViewById(R.id.profilePictureImageView);
         }
     }
 }
