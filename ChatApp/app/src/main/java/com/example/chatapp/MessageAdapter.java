@@ -3,11 +3,15 @@ package com.example.chatapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -33,17 +37,26 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         Message mensaje = messageList.get(position);
 
 
+        RequestOptions circleOptions = new RequestOptions().circleCrop();
 
         if (mensaje.esEntrante(currentUserId)) {
             holder.layoutMensajeEntrante.setVisibility(View.VISIBLE);
             holder.layoutMensajeSaliente.setVisibility(View.GONE);
             holder.textoMensajeEntrante.setText(mensaje.getMessage());
-
+            Glide.with(holder.itemView.getContext())
+                    .load(mensaje.getProfileImageUrl())
+                    .apply(circleOptions)
+                    .placeholder(R.drawable.ft_profile)
+                    .into(holder.imagenPerfilEntrante);
         } else {
             holder.layoutMensajeSaliente.setVisibility(View.VISIBLE);
             holder.layoutMensajeEntrante.setVisibility(View.GONE);
             holder.textoMensajeSaliente.setText(mensaje.getMessage());
-
+            Glide.with(holder.itemView.getContext())
+                    .load(mensaje.getProfileImageUrl())
+                    .apply(circleOptions)
+                    .placeholder(R.drawable.ft_profile)
+                    .into(holder.imagenPerfilSaliente);
         }
     }
 
@@ -57,7 +70,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         LinearLayout layoutMensajeSaliente;
         TextView textoMensajeEntrante;
         TextView textoMensajeSaliente;
-
+        ImageView imagenPerfilEntrante;
+        ImageView imagenPerfilSaliente;
 
         MessageViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,7 +79,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             layoutMensajeSaliente = itemView.findViewById(R.id.layoutMensajeSaliente);
             textoMensajeEntrante = itemView.findViewById(R.id.textoMensajeEntrante);
             textoMensajeSaliente = itemView.findViewById(R.id.textoMensajeSaliente);
-
+            imagenPerfilEntrante = itemView.findViewById(R.id.imagenPerfilEntrante);
+            imagenPerfilSaliente = itemView.findViewById(R.id.imagenPerfilSaliente);
         }
     }
 }
