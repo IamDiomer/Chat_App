@@ -1,7 +1,9 @@
 package com.example.chatapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -96,5 +98,25 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Autenticación fallida.", Toast.LENGTH_SHORT).show();
                     }
         });
+    }
+    public void irWhatsApp(View view) {
+        String url = "https://api.whatsapp.com/send?phone=+51918438816";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void irGitHub(View view) {
+        String url = "https://github.com/iamDiomer";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void irFacebook(View view) {
+        String url = "https://www.facebook.com/diomerluis.atachaonatividad";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }
