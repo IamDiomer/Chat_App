@@ -27,5 +27,4 @@
         android:title=" Salir"
         app:showAsAction="ifRoom" />
 
-
 </menu>
