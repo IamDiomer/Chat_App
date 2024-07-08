@@ -86,14 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.action_view_users) {
-            Intent intent = new Intent(MainActivity.this, ViewUsersActivity.class);
+        if (item.getItemId() == R.id.action_profile) {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
         } else if (item.getItemId() == R.id.action_create_group) {
             Intent intent = new Intent(MainActivity.this, CreateGroupActivity.class);
             startActivity(intent);
-        } else if (item.getItemId() == R.id.action_profile) {
-            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        } else if (item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         }else if (item.getItemId() == R.id.action_logout) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
