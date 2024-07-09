@@ -27,7 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
         textViewName = findViewById(R.id.tvNombe);
         textViewSurname = findViewById(R.id.tvApellido);
         textViewDni = findViewById(R.id.tvDni);
-        textViewPhone = findViewById(R.id.tvDni);
+        textViewPhone = findViewById(R.id.tvTelefono);
 
         db = FirebaseFirestore.getInstance();
 
