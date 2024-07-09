@@ -1,12 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewName"
+        android:id="@+id/tvNombe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre"
@@ -15,7 +16,7 @@
         android:gravity="center" />
 
     <TextView
-        android:id="@+id/textViewSurname"
+        android:id="@+id/tvApellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Apellido"
@@ -24,7 +25,7 @@
         android:gravity="center" />
 
     <TextView
-        android:id="@+id/textViewPhone"
+        android:id="@+id/tvTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Teléfono"
@@ -33,7 +34,7 @@
         android:gravity="center" />
 
     <TextView
-        android:id="@+id/textViewDNI"
+        android:id="@+id/tvDni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DNI"
@@ -46,8 +47,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:drawableLeft="@drawable/ic_action_name"
         android:onClick="abrirConfiguracionPerfil"
         android:padding="16dp"
         android:text="Configurar Perfil"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:iconTint="@color/material_dynamic_neutral80" />
 </LinearLayout>
