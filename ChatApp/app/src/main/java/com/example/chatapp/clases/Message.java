@@ -1,4 +1,4 @@
-package com.example.chatapp;
+package com.example.chatapp.clases;
 
 public class Message {
     private String senderId;

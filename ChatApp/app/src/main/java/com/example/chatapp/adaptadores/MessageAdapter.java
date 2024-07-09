@@ -1,4 +1,4 @@
-package com.example.chatapp;
+package com.example.chatapp.adaptadores;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.chatapp.R;
+import com.example.chatapp.clases.Message;
 
 import java.util.List;
 

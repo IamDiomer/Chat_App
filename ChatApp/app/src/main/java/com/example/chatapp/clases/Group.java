@@ -1,4 +1,4 @@
-package com.example.chatapp;
+package com.example.chatapp.clases;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.example.chatapp;
+package com.example.chatapp.adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.chatapp.ChatActivity;
+import com.example.chatapp.R;
+import com.example.chatapp.clases.Group;
 
 import java.util.List;
 
