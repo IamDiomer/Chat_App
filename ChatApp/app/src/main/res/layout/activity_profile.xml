@@ -29,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Teléfono"
+        android:inputType="number"
         android:textSize="24sp"
         android:padding="8dp"
         android:gravity="center" />
@@ -38,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DNI"
+        android:inputType="number"
         android:textSize="24sp"
         android:padding="8dp"
         android:gravity="center" />
